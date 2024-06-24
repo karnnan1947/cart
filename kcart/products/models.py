@@ -11,3 +11,6 @@ class Product(models.Model):
     image=models.ImageField(upload_to='media')
     priority=models.IntegerField(default=0) 
     delete_status=models.IntegerField(choices=DELETE_CHOICES,default=LIVE)
+
+    def __str__(self) -> str:
+        return self.title
