@@ -8,11 +8,17 @@
             <p>suii</p>
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'product_list' %}">Products</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
+            {% if not user.is_authenticated %}
             <li><a href="{% url 'account' %}">Account</a></li>
+            {% else %}
+            <li><a href="{% url 'signout' %}"> logout</a></li>
+            <a href="{% url 'showcart' %}"><img src="{% static 'images/cart.png' %}" width="30px" height="30px"></a>
+
+            {% endif %}
+            
+            
         </ul>
     </nav>
-    <a href="{% url 'showcart' %}"><img src="{% static 'images/cart.png' %}" width="30px" height="30px"></a>
+    
     <img src="{% static 'images/menu.png' %}" class="menu-icon" onclick="menutoggle()">
 </div>
