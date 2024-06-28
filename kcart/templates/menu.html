@@ -1,16 +1,17 @@
 {% load static %}
-<div class="navbar">
+<div class="navbar"> 
     <div class="logo">
         <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="logo" width="125px"></a>
     </div>
     <nav>
+        <h3>{{ user.customer_profile }}</h3>
         <ul id="MenuItems">
-            <p>suii</p>
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'product_list' %}">Products</a></li>
             {% if not user.is_authenticated %}
             <li><a href="{% url 'account' %}">Account</a></li>
             {% else %}
+            <li><a href="{% url 'orders' %}"> Orders</a></li>
             <li><a href="{% url 'signout' %}"> logout</a></li>
             <a href="{% url 'showcart' %}"><img src="{% static 'images/cart.png' %}" width="30px" height="30px"></a>
 

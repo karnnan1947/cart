@@ -43,6 +43,7 @@ def account(request):
             print(user)
             if user:
                 login(request,user)
+                acc={'user':username}
                 return redirect('index')
             else:
                 messages.error(request,"invalid details")
