@@ -3,7 +3,7 @@
 
 ## Features:
 
-- [x]product preview
+- [x] product preview
 - [x] user can create account 
 - [x] product add to cart 
 - [x] edit cart
