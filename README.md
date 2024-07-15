@@ -5,7 +5,7 @@
 
 - [x] product preview
 - [x] user can create account 
-- [x] product add to cart 
+- [x] add product to cart 
 - [x] edit cart
 - [x] order updates 
 - [x] product description view 
